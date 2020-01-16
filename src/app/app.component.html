@@ -2,7 +2,8 @@
   <div class="col-sm-8">
       <div class="game-area">
           <mat-grid-list class="tick-tack-grid" cols="3">
-            <mat-grid-tile *ngFor="let block of gs.blocks; let i = index; trackBy: trackByFn" (click)="playerClick(i)"><i [class]="block.symbol == 'done' ? 'material-icons tick' : 'material-icons cross'">{{ block.symbol }}</i>
+            <mat-grid-tile *ngFor="let block of gs.blocks; let i = index; trackBy: trackByFn" (click)="playerClick(i)">
+<i [class]="block.symbol == 'done' ? 'X' : 'O'"> {{ block.symbol }}</i>
             </mat-grid-tile>
           </mat-grid-list>
      </div>
@@ -10,9 +11,8 @@
 
   </div>
 
-      <div class="colcol-sm-8">
-
-        
+      <div class="colcol-sm-8" style="margin-top: 15em;">
+		<a class="pull-right text-right" class="btn btn-danger" (click)="newGame($event)" href="#">New Game</a>
       </div>
 
 </div>

@@ -8,10 +8,13 @@ setValue(value){
     this.value = value;
 
     if(this.value == "thick"){
-        this.symbol = "done";
+        this.symbol = "O";
     }else{
-        this.symbol = "close"
+        this.symbol = "X"
     }
+}
+getValue(){
+    return this.symbol;
 }
 
 }
